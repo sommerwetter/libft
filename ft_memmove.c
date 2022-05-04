@@ -6,11 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 09:21:48 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/27 11:32:24 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:20:06 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

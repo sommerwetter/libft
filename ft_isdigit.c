@@ -6,9 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:20:53 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/25 13:34:19 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:06:58 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

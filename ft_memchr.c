@@ -6,18 +6,18 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 19:33:08 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/30 20:07:11 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:20:20 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	size_t				i;
-	const unsigned char	*str_cpy;
+	unsigned char	*str_cpy;
 
-	str_cpy = (const unsigned char *)str;
+	str_cpy = (unsigned char *)str;
 	i = 0;
 	while (i < n)
 	{

@@ -6,11 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 19:02:07 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/30 19:20:31 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:19:38 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

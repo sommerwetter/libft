@@ -6,9 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 09:34:21 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/26 10:06:35 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:06:56 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

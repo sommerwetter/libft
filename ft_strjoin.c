@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/26 11:38:48 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/04 11:20:34 by marmoral         ###   ########.fr       */
+/*   Created: 2022/05/04 14:44:36 by marmoral          #+#    #+#             */
+/*   Updated: 2022/05/04 15:06:05 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
+	char	*new;
+	size_t	size_s1;
+	size_t	size_s2;
 	
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
-	return (s);
+	size_s1 = ft_strlen(s1);
+	size_s2 = ft_strlen(s2);
+	if (!s1 || !s2)
+		return (NULL);
+	new = malloc(size_s1 + size_s2 + 1);
+	if (!new)
+		return (NULL);
+	ft_memcpy(new, s1, size_s1);
+	ft_strlcat(new, s2, size_s1 + size_s2 + 1);
+
+	return (new);
 }

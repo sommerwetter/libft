@@ -6,11 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 10:29:12 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/27 11:51:30 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:19:48 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

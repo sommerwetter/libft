@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/26 11:38:48 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/04 11:20:34 by marmoral         ###   ########.fr       */
+/*   Created: 2022/05/04 12:38:10 by marmoral          #+#    #+#             */
+/*   Updated: 2022/05/04 13:02:55 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	size_t i;
-	
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
-	return (s);
+	char	*s1_cpy;
+
+	s1_cpy = malloc(ft_strlen(s1) + 1);
+	if (!s1_cpy)
+		return (NULL);
+	ft_memcpy(s1_cpy, s1, ft_strlen(s1) + 1);
+	return (s1_cpy);
 }

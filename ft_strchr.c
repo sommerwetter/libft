@@ -6,11 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:26:25 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/29 12:44:32 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:19:56 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {

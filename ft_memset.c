@@ -6,11 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 10:56:02 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/27 11:18:55 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:19:59 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t n)
 {

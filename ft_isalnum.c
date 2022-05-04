@@ -6,9 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 13:32:46 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/25 13:50:15 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:06:48 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

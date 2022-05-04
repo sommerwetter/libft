@@ -6,9 +6,11 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:14:22 by marmoral          #+#    #+#             */
-/*   Updated: 2022/04/27 16:15:43 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/04 11:07:49 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
