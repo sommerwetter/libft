@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 09:21:48 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/04 11:20:06 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:24:25 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *dest_cpy;
-	unsigned char *src_cpy;
-	size_t i;
+	unsigned char	*dest_cpy;
+	unsigned char	*src_cpy;
+	size_t			i;
 
 	i = 0;
 	dest_cpy = (unsigned char *)dest;

@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 19:33:08 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/04 11:20:20 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:23:46 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	size_t				i;
+	size_t			i;
 	unsigned char	*str_cpy;
 
 	str_cpy = (unsigned char *)str;

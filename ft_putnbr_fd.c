@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/27 16:26:25 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/10 12:22:01 by marmoral         ###   ########.fr       */
+/*   Created: 2022/05/10 12:06:53 by marmoral          #+#    #+#             */
+/*   Updated: 2022/05/10 12:20:20 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strchr(const char *str, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	char	*strnbr;
 
-	i = 0;
-	while (str[i])
-	{
-		if ((char)c == str[i])
-			return ((char *)&str[i]);
-		i++;
-	}
-	if ((char)c == str[i])
-		return ((char *)&str[i]);
-	return (NULL);
+	strnbr = ft_itoa(n);
+	write(fd, strnbr, ft_strlen(strnbr));
+	free(strnbr);
 }

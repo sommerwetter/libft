@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/27 16:26:25 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/10 12:22:01 by marmoral         ###   ########.fr       */
+/*   Created: 2022/05/10 11:58:38 by marmoral          #+#    #+#             */
+/*   Updated: 2022/05/10 12:05:22 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if ((char)c == str[i])
-			return ((char *)&str[i]);
-		i++;
-	}
-	if ((char)c == str[i])
-		return ((char *)&str[i]);
-	return (NULL);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
