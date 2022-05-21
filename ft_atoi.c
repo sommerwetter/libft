@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 11:13:05 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/04 11:20:38 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:40:01 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,16 @@ static	int	find_start(const char *str)
 
 static	int	find_nbr(const char *str, size_t n)
 {
+	int	x;
+
+	x = 0;
 	while (str[n] == '-' || str[n] == '+')
+	{
 		n++;
+		x++;
+	}
+	if (x > 1)
+		return (-1);
 	return (n);
 }
 
@@ -55,6 +63,8 @@ int	ft_atoi(const char *str)
 	nbr = 0;
 	result = 0;
 	x = find_nbr(str, find_start(str));
+	if (x == -1)
+		return (result);
 	while (('0' <= str[x]) && (str[x] <= '9'))
 	{
 		nbr = (int) str[x] - '0';

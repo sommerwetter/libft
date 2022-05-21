@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 11:54:34 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/04 11:19:52 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:15:41 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	ans;
 
 	i = 0;
-	src_l = 0;
-	dst_l = 0;
+	src_l = ft_strlen(src);
+	dst_l = ft_strlen(dst);
 	ans = 0;
-	while (dst[dst_l])
-		dst_l++;
-	while (src[src_l])
-		src_l++;
-	if (dst_l > size)
+	if (size < dst_l)
+	{
 		ans = src_l + size;
+		return (ans);
+	}
 	else
 		ans = dst_l + src_l;
 	while (src[i] && dst_l < (size - 1))
@@ -37,6 +36,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst_l++;
 		i++;
 	}
-	dst[dst_l++] = 0;
+	dst[dst_l] = 0;
 	return (ans);
 }

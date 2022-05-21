@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 10:32:37 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/10 12:28:58 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:48:15 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 
 char	*ft_strtrim(char const *s1, char const *set);
 
-char	*ft_strampi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 

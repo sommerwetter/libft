@@ -6,13 +6,13 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 16:04:13 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/09 16:53:59 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/17 13:48:21 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strampi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
 	char	*s2;
