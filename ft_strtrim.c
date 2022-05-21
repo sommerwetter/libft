@@ -5,55 +5,64 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/07 12:48:07 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/07 14:03:23 by marmoral         ###   ########.fr       */
+/*   Created: 2022/05/20 10:53:49 by marmoral          #+#    #+#             */
+/*   Updated: 2022/05/21 13:59:48 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	check(char const s1, char const *set)
+static	char	*ft_strdup_mod(const char *s1, int size, int i)
 {
+	char	*s1_cpy;
 	size_t	x;
-	int		a;
 
 	x = 0;
-	a = 0;
-	while (set[x])
+	if (size == 0)
+		return (&((char *)s1)[i]);
+	if (size < 0)
+		return (ft_strdup(""));
+	if (!s1)
+		return (NULL);
+	size++;
+	s1_cpy = malloc(size + 1);
+	if (!s1_cpy)
+		return (NULL);
+	while (size)
 	{
-		if (s1 == set[x])
-		{
-			a++;
-			x = 0;
-			break ;
-		}
+		s1_cpy[x] = s1[i];
+		i++;
 		x++;
+		size--;
 	}
-	return (a);
+	s1_cpy[x] = 0;
+	return (s1_cpy);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char		*s1_cpy;
-	size_t		i;
-	size_t		z;
+	int		i;
+	size_t	x;
+	int		end;
+	char	*s1_trim;
 
 	i = 0;
-	z = 0;
-	if (!s1 || !set)
-		return (NULL);
-	s1_cpy = malloc(ft_strlen(s1) + 1);
-	if (!s1_cpy)
-		return (NULL);
-	while (s1[i])
+	x = 0;
+	end = ft_strlen(s1) - 1;
+	while (set[x])
 	{
-		if (check(s1[i], set) == 0)
+		if (s1[i] == set[x])
 		{
-			s1_cpy[z] = s1[i];
-			z++;
+			i++;
+			x = -1;
 		}
-		i++;
+		else if (s1[end] == set[x] && end > i)
+		{
+			end--;
+			x = -1;
+		}
+		x++;
 	}
-	s1_cpy[++z] = 0;
-	return (s1_cpy);
+	s1_trim = ft_strdup_mod(s1, (end - i), i);
+	return (s1_trim);
 }

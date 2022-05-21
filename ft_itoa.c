@@ -6,22 +6,19 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:23:15 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/10 11:26:11 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/20 11:38:29 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	long	reverse(int n)
+static	long	reverse(long n_cpy)
 {
 	long	n_r;
-	long	n_cpy;
 	int		nbr;
 
 	n_r = 0;
-	n_cpy = n;
-	if (n_cpy < 0)
-		n_cpy *= (-1);
+	nbr = 0;
 	while (n_cpy > 0)
 	{
 		nbr = n_cpy % 10;
@@ -39,10 +36,7 @@ static	void	strnbr(int n, long n_r, char *str)
 	if (n < 0 && n != 0)
 		str[i++] = '-';
 	if (n == 0)
-	{
-		str[i] = '0';
-		i++;
-	}
+		str[i++] = '0';
 	while (n_r > 0)
 	{
 		str[i] = (n_r % 10) + '0';
@@ -66,13 +60,17 @@ char	*ft_itoa(int n)
 	char		*str;
 
 	count = 0;
-	n_r = reverse(n);
 	n_cpy = n;
+	if (n_cpy < 0)
+		n_cpy *= (-1);
+	n_r = reverse(n_cpy);
 	while (n_cpy > 0)
 	{
 		n_cpy /= 10;
 		count++;
 	}
+	if (n == 0 || n < 0)
+		count++;
 	str = malloc(count + 1);
 	if (!str)
 		return (NULL);

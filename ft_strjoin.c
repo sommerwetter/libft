@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 14:44:36 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/10 12:22:41 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/17 19:17:47 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new = malloc(size_s1 + size_s2 + 1);
 	if (!new)
 		return (NULL);
-	ft_memcpy(new, s1, size_s1);
+	ft_memcpy(new, s1, size_s1 + 1);
 	ft_strlcat(new, s2, size_s1 + size_s2 + 1);
 	return (new);
 }

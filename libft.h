@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 10:32:37 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/17 13:48:15 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/20 14:39:39 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,7 @@ void	*ft_memchr(const void *str, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
