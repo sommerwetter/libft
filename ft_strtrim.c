@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 10:53:49 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/21 13:59:48 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/21 14:17:48 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static	char	*ft_strdup_mod(const char *s1, int size, int i)
 
 	x = 0;
 	if (size == 0)
-		return (&((char *)s1)[i]);
+		return (ft_strdup(&s1[i]));
 	if (size < 0)
 		return (ft_strdup(""));
 	if (!s1)
