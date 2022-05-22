@@ -6,29 +6,13 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 11:13:05 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/17 13:39:43 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/22 18:56:47 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	check_sign(const char *str, size_t n)
-{
-	int	count;
-
-	count = 0;
-	while (str[n] == '-' || str[n] == '+')
-	{
-		if (str[n] == '-')
-			count++;
-		n++;
-	}
-	if ((count % 2) == 0)
-		return (1);
-	return (-1);
-}
-
-static	int	find_start(const char *str)
+static	int	check_sign(const char *str)
 {
 	size_t	i;
 
@@ -36,18 +20,24 @@ static	int	find_start(const char *str)
 	while (str[i] == ' ' || str[i] == '\n'
 		|| str[i] == '\f' || str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
 		i++;
-	return (i);
+	if (str[i] == '-')
+		return (-1);
+	return (1);
 }
 
-static	int	find_nbr(const char *str, size_t n)
+static	int	find_start(const char *str)
 {
-	int	x;
+	size_t	x;
+	size_t	n;
 
 	x = 0;
-	while (str[n] == '-' || str[n] == '+')
+	n = 0;
+	while (str[n] == '-' || str[n] == '+' || str[n] == ' ' || str[n] == '\n'
+		|| str[n] == '\f' || str[n] == '\r' || str[n] == '\t' || str[n] == '\v')
 	{
+		if (str[n] == '-' || str[n] == '+')
+			x++;
 		n++;
-		x++;
 	}
 	if (x > 1)
 		return (-1);
@@ -62,14 +52,14 @@ int	ft_atoi(const char *str)
 
 	nbr = 0;
 	result = 0;
-	x = find_nbr(str, find_start(str));
+	x = find_start(str);
 	if (x == -1)
-		return (result);
-	while (('0' <= str[x]) && (str[x] <= '9'))
+		return (0);
+	while (ft_isdigit(str[x]))
 	{
-		nbr = (int) str[x] - '0';
+		nbr = str[x] - '0';
 		result = (result * 10) + nbr;
 		x++;
 	}
-	return (check_sign(str, find_start(str)) * result);
+	return (check_sign(str) * result);
 }

@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 12:03:43 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/10 12:23:05 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/22 19:19:53 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
-	i = 0;
-	while (str[i])
-		i++;
+	i = ft_strlen(str);
 	while (i != -1)
 	{
 		if ((char) c == str[i])
