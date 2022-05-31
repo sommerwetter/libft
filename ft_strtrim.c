@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*trim(char const *s1, char const *set)
+static	char	*trim(char const *s1, char const *set)
 {
 	char	*s1_trim;
 	int		i;
