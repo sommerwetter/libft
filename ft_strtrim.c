@@ -6,18 +6,18 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 10:53:49 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/22 19:46:23 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:23:09 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*trim(char const *s1, char const *set)
 {
+	char	*s1_trim;
 	int		i;
 	size_t	x;
 	int		end;
-	char	*s1_trim;
 
 	i = 0;
 	x = 0;
@@ -36,6 +36,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		}
 		x++;
 	}
-	s1_trim = ft_substr(s1, i, (end - i));
-	return (s1_trim);
+	return (s1_trim = ft_substr(s1, i, (end - i)));
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	if (!s1 || !set)
+		return (NULL);
+	return (trim(s1, set));
 }

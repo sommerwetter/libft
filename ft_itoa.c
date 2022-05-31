@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:23:15 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/20 11:38:29 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/24 10:35:00 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static	void	strnbr(int n, long n_r, char *str)
 	size_t	i;
 
 	i = 0;
-	if (n < 0 && n != 0)
+	if (n < 0)
 		str[i++] = '-';
 	if (n == 0)
 		str[i++] = '0';

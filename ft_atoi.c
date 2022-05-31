@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 11:13:05 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/22 18:56:47 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:47:58 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,13 @@ static	int	find_start(const char *str)
 		|| str[n] == '\f' || str[n] == '\r' || str[n] == '\t' || str[n] == '\v')
 	{
 		if (str[n] == '-' || str[n] == '+')
-			x++;
+			if (str[n + 1] == '-' || str[n + 1] == '+' || str[n + 1] == ' '
+				|| str[n + 1] == '\n' || str[n + 1] == '\f'
+				|| str[n + 1] == '\r' || str[n + 1] == '\t'
+				|| str[n + 1] == '\v')
+				return (-1);
 		n++;
 	}
-	if (x > 1)
-		return (-1);
 	return (n);
 }
 

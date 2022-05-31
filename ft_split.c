@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 14:48:39 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/21 15:51:08 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/05/24 11:24:40 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	x = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == 0))
