@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-long	reversenbr(int nb)
+static	long	reversenbr(int nb)
 {
 	int		b;
 	long	r;
