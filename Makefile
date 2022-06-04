@@ -6,7 +6,7 @@
 #    By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/14 22:07:12 by marmoral          #+#    #+#              #
-#    Updated: 2022/05/31 12:13:59 by marmoral         ###   ########.fr        #
+#    Updated: 2022/06/04 13:16:50 by marmoral         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,12 +30,11 @@ CC = gcc
 
 all: $(NAME)
 
-%.o: %.c
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
-
 $(NAME) : ${OBJ}
 	ar rcs $(NAME) ${OBJ}
-	ranlib $(NAME)
+
+%.o: %.c
+	$(CC) $(FLAGS) -c -o $@ $^
 
 clean:
 	${RM} ${OBJ}
@@ -43,6 +42,6 @@ clean:
 fclean: clean
 	${RM} $(NAME) 
 
-re: clean all
+re: fclean all
 
 .PHONY: all clean fclean re

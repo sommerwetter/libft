@@ -6,7 +6,7 @@
 /*   By: marmoral <marmoral@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 11:13:05 by marmoral          #+#    #+#             */
-/*   Updated: 2022/05/31 13:47:58 by marmoral         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:00:31 by marmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,8 @@ static	int	find_start(const char *str)
 	while (str[n] == '-' || str[n] == '+' || str[n] == ' ' || str[n] == '\n'
 		|| str[n] == '\f' || str[n] == '\r' || str[n] == '\t' || str[n] == '\v')
 	{
-		if (str[n] == '-' || str[n] == '+')
-			if (str[n + 1] == '-' || str[n + 1] == '+' || str[n + 1] == ' '
-				|| str[n + 1] == '\n' || str[n + 1] == '\f'
-				|| str[n + 1] == '\r' || str[n + 1] == '\t'
-				|| str[n + 1] == '\v')
-				return (-1);
+		if ((str[n] == '-' || str[n] == '+') && !ft_isdigit(str[n + 1]))
+			return (-1);
 		n++;
 	}
 	return (n);
