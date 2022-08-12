@@ -1,6 +1,6 @@
 # libft
 
-**Coding own C library. 42 Project.**
+**Coding own standard C library. 42 Project.**
 
 !NO BONUSES
 
